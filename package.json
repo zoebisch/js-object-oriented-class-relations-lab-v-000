@@ -1,11 +1,12 @@
 {
-  "name": "javascript-strings-lab",
+{
+  "name": "js-object-oriented-class-relations-lab",
   "version": "0.2.0",
-  "description": "JavaScript Strings Code-along for Learn.co",
+  "description": "Class Relations Lab for Learn.co",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/learn-co-curriculum/javascript-strings-lab.git"
+    "url": "git+ssh://git@github.com/learn-co-curriculum/js-object-oriented-class-relations-lab.git"
   },
   "keywords": [
     "learn",
@@ -17,9 +18,9 @@
   "author": "@gj",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/learn-co-curriculum/javascript-strings-lab/issues"
+    "url": "https://github.com/learn-co-curriculum/js-object-oriented-class-relations-lab/issues"
   },
-  "homepage": "https://github.com/learn-co-curriculum/javascript-strings-lab#readme",
+  "homepage": "https://github.com/learn-co-curriculum/js-object-oriented-class-relations-lab#readme",
   "devDependencies": {
     "learn-browser": "^0.1.6"
   }
