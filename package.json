@@ -1,5 +1,4 @@
 {
-{
   "name": "js-object-oriented-class-relations-lab",
   "version": "0.2.0",
   "description": "Class Relations Lab for Learn.co",
@@ -8,12 +7,16 @@
     "type": "git",
     "url": "git+ssh://git@github.com/learn-co-curriculum/js-object-oriented-class-relations-lab.git"
   },
+  "scripts": {
+    "postinstall": "gem install learn-co",
+    "test": "node_modules/browser-sync/bin/browser-sync.js start --config node_modules/learn-browser/bs-config.js"
+  },
   "keywords": [
     "learn",
     "flatiron school",
     "javascript",
-    "strings",
-    "code-along"
+    "object orientation",
+    "lab"
   ],
   "author": "@gj",
   "license": "SEE LICENSE IN LICENSE.md",
@@ -22,6 +25,6 @@
   },
   "homepage": "https://github.com/learn-co-curriculum/js-object-oriented-class-relations-lab#readme",
   "devDependencies": {
-    "learn-browser": "^0.1.6"
+    "learn-browser": "^0.1.13"
   }
 }
