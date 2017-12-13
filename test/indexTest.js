@@ -68,8 +68,23 @@ describe('passengers', function() {
   })
 })
 
-
 describe('trips', function() {
+    let driver
+    let passenger
+    let secondPassenger
+
+  beforeEach(function() {
+    driver = new Driver("Al")
+    passenger = new Passenger("Bob")
+    secondPassenger = new Passenger("Susan")
+  });
+
+  afterEach(function(){
+    store.drivers = []
+    store.passengers = []
+    store.trips = []
+  })
+
   describe('creating a new trip', function() {
     describe('store', function() {
       it('can store trips', function() {
@@ -77,24 +92,22 @@ describe('trips', function() {
       })
     })
 
-
-
     it('adds the trip to the store', function() {
       store.trips = []
-      let trip = new Trip()
+      let trip = new Trip(driver, passenger)
       expect(store.trips[0]).to.be.instanceof(Trip)
     })
 
     it('adds a numerical id to each trip', function() {
       store.trips = []
-      let trip = new Trip()
+      let trip = new Trip(driver, passenger)
       expect(typeof store.trips[0].id).to.equal("number")
     })
 
     it('adds a unique id to each trip', function() {
       store.trips = []
-      let trip = new Trip()
-      let otherTrip = new Trip()
+      let trip = new Trip(driver, passenger)
+      let otherTrip = new Trip(driver, secondPassenger)
       expect(trip.id).to.not.equal(otherTrip.id)
     })
   })
@@ -104,8 +117,8 @@ describe('relating a driver to a trip and a passenger', function() {
   let driver;
   let passenger;
   let firstTrip;
-  let susan;
   let secondTrip;
+  let secondPassenger
 
   beforeEach(function() {
     driver = new Driver("Alfie")
@@ -161,3 +174,4 @@ describe('relating a driver to a trip and a passenger', function() {
     })
   })
 })
+
